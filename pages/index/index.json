@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "nx-scroll": "/components/nxScroll/index"
+  }
+}

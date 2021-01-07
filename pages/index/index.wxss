@@ -1,0 +1,10 @@
+.scroll-view{
+  white-space: nowrap;
+  height: 50rpx;
+}
+
+.swiper-container{
+  height: calc(100vh - 50rpx);
+}
+
+

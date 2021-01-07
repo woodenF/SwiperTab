@@ -1,0 +1,84 @@
+<swiper
+  class=""
+  indicator-dots="{{false}}"
+  indicator-color=""
+  indicator-active-color=""
+  autoplay="{{false}}"
+  style="height: 100vh"
+  interval="5000"
+  duration="500"
+  circular="|true,false|">
+  <swiper-item
+    class=""
+    item-id=""
+  >
+    <nx-scroll
+      id="scroll"
+      loadStatus="{{requesting}}"
+      finished="{{end}}"
+      bind:refresh="refresh"
+      bind:more="more"
+    >
+      <view class="cells">
+        <view class="cell" wx:for="{{listData}}" wx:key="index" bind:tap="itemClick">
+          {{item}}
+        </view>
+      </view>
+    </nx-scroll>
+  </swiper-item>
+  <swiper-item
+    class=""
+    item-id=""
+  >
+    <nx-scroll
+      id="scroll"
+      loadStatus="{{requesting}}"
+      finished="{{end}}"
+      bind:refresh="refresh"
+      bind:more="more"
+    >
+      <view class="cells">
+        <view class="cell" wx:for="{{listData}}" wx:key="index" bind:tap="itemClick">
+          {{item}}
+        </view>
+      </view>
+    </nx-scroll>
+  </swiper-item>
+  <swiper-item
+    class=""
+    item-id=""
+  >
+    <nx-scroll
+      id="scroll"
+      loadStatus="{{requesting}}"
+      finished="{{end}}"
+      bind:refresh="refresh"
+      bind:more="more"
+    >
+      <view class="cells">
+        <view class="cell" wx:for="{{listData}}" wx:key="index" bind:tap="itemClick">
+          {{item}}
+        </view>
+      </view>
+    </nx-scroll>
+  </swiper-item>
+  <swiper-item
+    class=""
+    item-id=""
+  >
+    <nx-scroll
+      id="scroll"
+      loadStatus="{{requesting}}"
+      finished="{{end}}"
+      bind:refresh="refresh"
+      bind:more="more"
+    >
+      <view class="cells">
+        <view class="cell" wx:for="{{listData}}" wx:key="index" bind:tap="itemClick">
+          {{item}}
+        </view>
+      </view>
+    </nx-scroll>
+  </swiper-item>
+</swiper>
+
