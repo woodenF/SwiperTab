@@ -1,10 +1,28 @@
-.scroll-view{
-  white-space: nowrap;
-  height: 50rpx;
+.tab-container{
+  display: flex;
+  width: 100%;
+  box-shadow: 3rpx -11rpx 20rpx 2rpx #000;
+  height: 60rpx;
+  align-items: center;
 }
 
 .swiper-container{
-  height: calc(100vh - 50rpx);
+  height: calc(100vh - 60rpx);
 }
 
-
+.tab-box{
+  display: flex;
+}
+.tab{
+  width: 187.5rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tab-box .active{
+  color: red;
+}
+.tab image{
+  width: 187.5rpx;
+}

@@ -1,8 +1,8 @@
-<view>
-  <movable-area class="movable-area">
+<view style="height: 100%;width: 100%;">
+  <movable-area style="height: 100%;width: 100%;" class="movable-area">
     <movable-view
       class="scroll"
-      style="height: calc(100vh + {{refreshSize}}rpx)"
+      style="height: calc(100% + {{refreshSize}}rpx)"
       bindchange="onRefresh"
       bind:touchend="onRefreshEnd"
       direction="vertical"

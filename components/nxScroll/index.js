@@ -71,6 +71,7 @@
       }
     },
     onScroll() {
+      console.log('scroll')
       this.setData({
         overOnePage: true
       })

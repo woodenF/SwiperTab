@@ -1,84 +1,130 @@
-<swiper
-  class=""
-  indicator-dots="{{false}}"
-  indicator-color=""
-  indicator-active-color=""
-  autoplay="{{false}}"
-  style="height: 100vh"
-  interval="5000"
-  duration="500"
-  circular="|true,false|">
-  <swiper-item
-    class=""
-    item-id=""
-  >
-    <nx-scroll
-      id="scroll"
-      loadStatus="{{requesting}}"
-      finished="{{end}}"
-      bind:refresh="refresh"
-      bind:more="more"
-    >
-      <view class="cells">
-        <view class="cell" wx:for="{{listData}}" wx:key="index" bind:tap="itemClick">
-          {{item}}
+<view>
+  <scroll-view class="tab-container" scroll-x scroll-into-view="tab-{{currentSwiperItem}}">
+    <view class="tab-box">
+      <view id="tab-{{index}}" wx:for="{{6}}" wx:key="index">
+        <view class="tab {{currentSwiperItem === index ? 'active' : ''}}">
+          第{{index}}个
         </view>
       </view>
-    </nx-scroll>
-  </swiper-item>
-  <swiper-item
-    class=""
-    item-id=""
-  >
-    <nx-scroll
-      id="scroll"
-      loadStatus="{{requesting}}"
-      finished="{{end}}"
-      bind:refresh="refresh"
-      bind:more="more"
+    </view>
+  </scroll-view>
+  <swiper
+    class="swiper-container"
+    indicator-dots="{{false}}"
+    indicator-color=""
+    indicator-active-color=""
+    bindchange="handleSwiperChange"
+    current="{{currentSwiperItem}}"
+    autoplay="{{false}}"
+    interval="5000"
+    duration="500">
+    <swiper-item
+      class=""
+      item-id=""
     >
-      <view class="cells">
-        <view class="cell" wx:for="{{listData}}" wx:key="index" bind:tap="itemClick">
-          {{item}}
+      <nx-scroll
+        id="scroll"
+        loadStatus="{{requesting}}"
+        finished="{{end}}"
+        bind:refresh="refresh"
+        bind:more="more"
+      >
+        <view class="cells">
+          <view class="cell" wx:for="{{listData}}" wx:key="index" bind:tap="itemClick">
+            swiper1-{{item}}
+          </view>
         </view>
-      </view>
-    </nx-scroll>
-  </swiper-item>
-  <swiper-item
-    class=""
-    item-id=""
-  >
-    <nx-scroll
-      id="scroll"
-      loadStatus="{{requesting}}"
-      finished="{{end}}"
-      bind:refresh="refresh"
-      bind:more="more"
+      </nx-scroll>
+    </swiper-item>
+    <swiper-item
+      class=""
+      item-id=""
     >
-      <view class="cells">
-        <view class="cell" wx:for="{{listData}}" wx:key="index" bind:tap="itemClick">
-          {{item}}
+      <nx-scroll
+        id="scroll"
+        loadStatus="{{requesting}}"
+        finished="{{end}}"
+        bind:refresh="refresh"
+        bind:more="more"
+      >
+        <view class="cells">
+          <view class="cell" wx:for="{{listData}}" wx:key="index" bind:tap="itemClick">
+            swiper2-{{item}}
+          </view>
         </view>
-      </view>
-    </nx-scroll>
-  </swiper-item>
-  <swiper-item
-    class=""
-    item-id=""
-  >
-    <nx-scroll
-      id="scroll"
-      loadStatus="{{requesting}}"
-      finished="{{end}}"
-      bind:refresh="refresh"
-      bind:more="more"
+      </nx-scroll>
+    </swiper-item>
+    <swiper-item
+      class=""
+      item-id=""
     >
-      <view class="cells">
-        <view class="cell" wx:for="{{listData}}" wx:key="index" bind:tap="itemClick">
-          {{item}}
+      <nx-scroll
+        id="scroll"
+        loadStatus="{{requesting}}"
+        finished="{{end}}"
+        bind:refresh="refresh"
+        bind:more="more"
+      >
+        <view class="cells">
+          <view class="cell" wx:for="{{listData}}" wx:key="index" bind:tap="itemClick">
+            swiper3-{{item}}
+          </view>
         </view>
-      </view>
-    </nx-scroll>
-  </swiper-item>
-</swiper>
-
+      </nx-scroll>
+    </swiper-item>
+    <swiper-item
+      class=""
+      item-id=""
+    >
+      <nx-scroll
+        id="scroll"
+        loadStatus="{{requesting}}"
+        finished="{{end}}"
+        bind:refresh="refresh"
+        bind:more="more"
+      >
+        <view class="cells">
+          <view class="cell" wx:for="{{listData}}" wx:key="index" bind:tap="itemClick">
+            swiper4-{{item}}
+          </view>
+        </view>
+      </nx-scroll>
+    </swiper-item>
+    <swiper-item
+      class=""
+      item-id=""
+    >
+      <nx-scroll
+        id="scroll"
+        loadStatus="{{requesting}}"
+        finished="{{end}}"
+        bind:refresh="refresh"
+        bind:more="more"
+      >
+        <view class="cells">
+          <view class="cell" wx:for="{{listData}}" wx:key="index" bind:tap="itemClick">
+            swiper4-{{item}}
+          </view>
+        </view>
+      </nx-scroll>
+    </swiper-item>
+    <swiper-item
+      class=""
+      item-id=""
+    >
+      <nx-scroll
+        id="scroll"
+        loadStatus="{{requesting}}"
+        finished="{{end}}"
+        bind:refresh="refresh"
+        bind:more="more"
+      >
+        <view class="cells">
+          <view class="cell" wx:for="{{listData}}" wx:key="index" bind:tap="itemClick">
+            swiper4-{{item}}
+          </view>
+        </view>
+      </nx-scroll>
+    </swiper-item>
+  </swiper>
+</view>

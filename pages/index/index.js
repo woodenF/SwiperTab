@@ -13,6 +13,7 @@ Page({
     topSize: 0,
     bottomSize: 0,
     color: '#3f82fd',
+    currentSwiperItem: 0
   },
   onLoad() {
     const arr = Array.from({ length: 100}, (item, index) => index)
@@ -21,6 +22,12 @@ Page({
         listData: arr
       })
     }, 1500);
+  },
+  handleSwiperChange(e) {
+    const current = e.detail.current
+    this.setData({
+      currentSwiperItem: current
+    })
   },
   itemClick(e) {
     console.log(e)
